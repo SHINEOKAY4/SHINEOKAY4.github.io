@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio • SHINE — Roblox Creator</title>
+  <meta name="description" content="Roblox creator portfolio for SHINE — systems design, Luau, OOP/FP, typechecking." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Notice / Banner -->
+  <div class="ribbon">
+    <div class="container">Open to opportunities — Systems, Gameplay, or Tools engineering.</div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <div class="brand">Portfolio</div>
+      <div class="nav__links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="images/hero.png" alt="" />
+      <div class="hero__overlay"></div>
+      <div class="hero__grid"></div>
+    </div>
+    <div class="container hero__content">
+      <h1>Hi, I’m <span>SHINE</span></h1>
+      <p>Roblox developer crafting robust gameplay systems and clean, typed Luau code. I build scalable frameworks, smooth UX, and reliable services for experiences that feel great to play.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projects">View Projects</a>
+        <a class="btn btn--ghost" href="https://github.com/SHINEOKAY4" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+      <div class="badges">
+        <span>Luau</span><span>OOP</span><span>Functional</span><span>Systems Design</span><span>Type Checking</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section--tinted">
+    <div class="container">
+      <div class="section__head">
+        <h2>Projects</h2>
+        <p class="muted">Selected Roblox systems and gameplay features.</p>
+      </div>
+
+      <div class="cards">
+        <!-- Grimheart -->
+        <article class="card">
+          <div class="card__media">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/JA-3kWs10LQ?si=6p_NAmuueG5wEVDs" title="Grimheart Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="card__body">
+            <h3>Grimheart</h3>
+            <p class="muted">Action‑RPG systems demo</p>
+            <ul class="list">
+              <li>Persistent saving & serialization</li>
+              <li>Player customization & appearance</li>
+              <li>Responsive combat: roll & sword attacks</li>
+              <li>Attribute progression system</li>
+            </ul>
+          </div>
+          <div class="card__actions">
+            <a class="btn btn--small" href="https://www.roblox.com/games/5995383954/Grimheart" target="_blank" rel="noreferrer">Play on Roblox</a>
+          </div>
+        </article>
+
+        <!-- Day & Night / Inventory / Camera -->
+        <article class="card">
+          <div class="card__media">
+            <img class="pattern" src="images/pattern.png" alt="" />
+          </div>
+          <div class="card__body">
+            <h3>Day & Night • Inventory • Camera</h3>
+            <p class="muted">Environment & UI systems</p>
+            <ul class="list">
+              <li>Seamless day/night transitions</li>
+              <li>Drag‑and‑drop inventory UI</li>
+              <li>Custom cinematic camera</li>
+            </ul>
+          </div>
+          <div class="card__actions">
+            <a class="btn btn--small" href="https://www.roblox.com/games/15689025050/Day-and-Night-Cycle-Inventory-Dragging-Camera" target="_blank" rel="noreferrer">Play on Roblox</a>
+          </div>
+        </article>
+
+        <!-- Tap World -->
+        <article class="card">
+          <div class="card__media">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/tBq_BqsIGsM?si=hXCHnYPo_fBr6bZk" title="Tap World Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="card__body">
+            <h3>Tap World</h3>
+            <p class="muted">Idle clicker economy</p>
+            <ul class="list">
+              <li>Core clicker progression loop</li>
+              <li>Pet system & egg hatching</li>
+              <li>Inventory & rebirth mechanics</li>
+              <li>Balanced pet multiplier economy</li>
+            </ul>
+          </div>
+          <div class="card__actions">
+            <a class="btn btn--small" href="https://www.roblox.com/games/113539794566492/Tap-World" target="_blank" rel="noreferrer">Play on Roblox</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Skills</h2>
+        <p class="muted">Tools, paradigms, and approaches I use</p>
+      </div>
+      <div class="chips">
+        <span class="chip">Roblox Studio</span>
+        <span class="chip">Luau & Typechecking</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">OOP & FP</span>
+        <span class="chip">Systems Design</span>
+        <span class="chip">Reliable • Team Player</span>
+        <span class="chip">Problem Solving</span>
+        <span class="chip">Adapts to Frameworks</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--tinted">
+    <div class="container">
+      <div class="section__head">
+        <h2>Contact</h2>
+        <p class="muted">Let’s build something great.</p>
+      </div>
+      <div class="contact__grid">
+        <div><b>Email:</b> <a href="mailto:SyntaxOperator@Gmail.com">SyntaxOperator@Gmail.com</a></div>
+        <div><b>Roblox:</b> <a href="https://www.roblox.com/users/5251245881/profile" target="_blank" rel="noreferrer">SHINE on Roblox</a></div>
+        <div><b>GitHub:</b> <a href="https://github.com/SHINEOKAY4" target="_blank" rel="noreferrer">github.com/SHINEOKAY4</a></div>
+        <div><b>Discord:</b> Shine_Okay</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> SHINE — All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // highlight current section in nav on scroll
+    const links = [...document.querySelectorAll('.nav__links a')];
+    const ids = links.map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        const idx = ids.indexOf(e.target);
+        if(idx >= 0){
+          if(e.isIntersecting){ links.forEach(l=>l.classList.remove('active')); links[idx].classList.add('active'); }
+        }
+      });
+    },{rootMargin:'-55% 0px -40% 0px', threshold: 0});
+    ids.forEach(el=> el && obs.observe(el));
+  </script>
+</body>
+</html>
