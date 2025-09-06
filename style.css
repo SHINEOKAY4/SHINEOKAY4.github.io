@@ -79,8 +79,20 @@ a:hover{text-decoration:underline}
 @media(min-width:760px){.contact-cdn{grid-template-columns:repeat(2,1fr)}}
 .contact-link{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:linear-gradient(180deg,#0f2136,#0c1828);border:1px solid rgba(255,255,255,.10);color:#e6eef8;text-decoration:none;transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease}
 .contact-link:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,0,0,.35);border-color:rgba(94,240,255,.35);text-decoration:none}
-.brand{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:6px}
-.brand img{width:18px;height:18px;display:block}
+/* Contact icons fix */
+.brand {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+
+.brand img {
+  width: 20px;   /* 👈 keeps icons consistent and small */
+  height: 20px;
+  display: block;
+}
 .brand.gmail{background:#D44638}
 .brand.github{background:#0d1117}
 .brand.discord{background:#5865F2}
