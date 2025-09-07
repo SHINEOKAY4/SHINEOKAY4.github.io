@@ -94,7 +94,6 @@ local function ensureRunnerConnection()
 end
 
 --- Registers a timer to be driven by the shared Heartbeat runner.
---- @param timer TimerInstance
 local function addActiveTimer(timer: TimerInstance)
 	table.insert(ActiveTimerList, timer)
 	ensureRunnerConnection()
@@ -250,5 +249,6 @@ function Timer.OnEnded(self: TimerInstance, callback: () -> ())
 end
 
 return Timer
+
 
 
