@@ -89,7 +89,7 @@ a:hover{text-decoration:underline}
 }
 
 .brand img {
-  width: 20px;   /* 👈 keeps icons consistent and small */
+  width: 20px;  
   height: 20px;
   display: block;
 }
