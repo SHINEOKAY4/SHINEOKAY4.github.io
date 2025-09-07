@@ -1,6 +1,6 @@
 --!strict
 --[[
-Timer.lua — Drift-free timers with a shared Heartbeat runner.
+Timer.lua â€” Drift-free timers with a shared Heartbeat runner.
 
 Design:
 - Server-synchronized time via Workspace:GetServerTimeNow()
@@ -38,10 +38,6 @@ export type TimerInstance = typeof(setmetatable({} :: {
 	_isReset: boolean,
 	_identifier: string,
 }, Timer))
-
--- ------------------------------------------------------------------------------
--- Internal runner (a single Heartbeat connection drives all active timers)
--- ------------------------------------------------------------------------------
 
 local ActiveTimerList: { TimerInstance } = {}
 local RunnerHeartbeatConnection: RBXScriptConnection? = nil
@@ -104,11 +100,6 @@ local function addActiveTimer(timer: TimerInstance)
 	table.insert(ActiveTimerList, timer)
 	ensureRunnerConnection()
 end
-
--- ------------------------------------------------------------------------------
--- Public API
--- ------------------------------------------------------------------------------
-
 --- Creates a new timer instance. The timer is idle until Start is called.
 --- @return TimerInstance
 function Timer.new(): TimerInstance
@@ -238,10 +229,6 @@ function Timer.Remaining(self: TimerInstance): number
 	return math.max(0, self._pausedRemainingSeconds or 0)
 end
 
--- ------------------------------------------------------------------------------
--- Subscription helpers
--- ------------------------------------------------------------------------------
-
 --- Subscribes a callback that receives the remaining time every frame.
 --- @param callback fun(remainingSeconds: number)
 --- @return RBXScriptConnection
@@ -264,3 +251,4 @@ function Timer.OnEnded(self: TimerInstance, callback: () -> ())
 end
 
 return Timer
+
