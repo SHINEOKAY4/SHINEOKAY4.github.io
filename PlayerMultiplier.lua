@@ -1,7 +1,5 @@
 --!strict
--- ServerScriptService/Service/PlayerMultiplier.luau
--- Facade over your class-based `Multiplier` to operate per-player without leaking instances.
--- Keeps the ergonomics: PlayerMultiplier.Upsert(player, ...), Get(player, metric), etc.
+-- PlayerMultiplier
 
 local MultiplierModule = require(script.Multiplier)
 
@@ -38,7 +36,7 @@ end
   @param sourceName string -- Logical source (e.g., "Pets", "Gamepass").
   @param contributorId string -- Unique id within the source (e.g., pet UID).
   @param operationKind "additive" | "multiplicative"
-  @param value number -- For "additive": percent as decimal (0.25 = +25%). For "multiplicative": factor (2 = 2×).
+  @param value number -- For "additive": percent as decimal (0.25 = +25%). For "multiplicative": factor (2 = 2Ã—).
   @param expiresAtTime number? -- Absolute expiry (e.g., os.clock()) or nil for no expiry.
 ]=]
 function PlayerMultiplier.Upsert(
@@ -66,7 +64,7 @@ function PlayerMultiplier.Remove(player: Player, metricName: string, sourceName:
 end
 
 --[=[
-  Clear all contributions for a metric for this player (resets to 1×).
+  Clear all contributions for a metric for this player (resets to 1Ã—).
 
   @param player Player
   @param metricName string
@@ -153,3 +151,4 @@ function PlayerMultiplier.DestroyFor(player: Player)
 end
 
 return PlayerMultiplier
+
