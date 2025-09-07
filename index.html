@@ -19,10 +19,11 @@
     <div class="container nav__inner">
       <div class="brand">Portfolio</div>
       <div class="nav__links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+       <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#code">Code</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -134,6 +135,82 @@
       </div>
     </div>
   </section>
+
+  <!-- CODE SAMPLES -->
+<section id="code" class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Code Samples</h2>
+      <p class="muted">Core systems and utilities I’ve built for scalable Roblox experiences.</p>
+    </div>
+
+    <div class="cards">
+      <!-- Timer -->
+      <article class="card card--code">
+        <div class="card__body">
+          <h3>Timer</h3>
+          <p class="muted">Lightweight, precise timing utility for scheduled callbacks (no drift, pause/resume/cancel).</p>
+          <ul class="list">
+            <li>Heartbeat-driven; no per-instance connections</li>
+            <li>Absolute end-times to avoid drift</li>
+            <li>Pause, resume, reset, cancel</li>
+          </ul>
+        </div>
+        <div class="card__actions">
+          <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/Timer.lua" target="_blank" rel="noreferrer">View Code</a>
+        </div>
+      </article>
+
+      <!-- PlayerSession -->
+      <article class="card card--code">
+        <div class="card__body">
+          <h3>PlayerSession</h3>
+          <p class="muted">Authoritative per-player session/data layer with safe retrieval and persistence.</p>
+          <ul class="list">
+            <li>Await + retry pattern for DataStores</li>
+            <li>Validated getters; non-blocking reads</li>
+            <li>Clear lifecycle and teardown</li>
+          </ul>
+        </div>
+        <div class="card__actions">
+          <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/PlayerSession.lua" target="_blank" rel="noreferrer">View Code</a>
+        </div>
+      </article>
+
+      <!-- PlayerMultiplier -->
+      <article class="card card--code">
+        <div class="card__body">
+          <h3>PlayerMultiplier</h3>
+          <p class="muted">Composable per-player buffs/multipliers (pets, boosts, gamepasses) with expiry.</p>
+          <ul class="list">
+            <li>Additive and multiplicative layers</li>
+            <li>No instance leaks; clear API</li>
+            <li>Expiration & cleanup logic</li>
+          </ul>
+        </div>
+        <div class="card__actions">
+          <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/PlayerMultiplier.lua" target="_blank" rel="noreferrer">View Code</a>
+        </div>
+      </article>
+
+      <!-- Inventory -->
+      <article class="card card--code">
+        <div class="card__body">
+          <h3>Inventory</h3>
+          <p class="muted">Server-authoritative inventory (singleton) with idempotent grants and capacity limits.</p>
+          <ul class="list">
+            <li>All-or-nothing grants; slot enforcement</li>
+            <li>Changed(player, delta) event for UI</li>
+            <li>Pet power from defs (click × shiny)</li>
+          </ul>
+        </div>
+        <div class="card__actions">
+          <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/Inventory.lua" target="_blank" rel="noreferrer">View Code</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
   <!-- SKILLS -->
   <section id="skills" class="section">
