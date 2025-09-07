@@ -19,11 +19,11 @@
     <div class="container nav__inner">
       <div class="brand">Portfolio</div>
       <div class="nav__links">
-       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#code">Code</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#code">Code</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -52,9 +52,10 @@
     <div class="container about">
       <div class="about__text">
         <h2>About</h2>
-        <p>I’m a systems‑oriented Roblox developer who loves turning game design ideas into reliable, extensible code — from data‑driven economies to tactile combat and UI frameworks. I use Luau with OOP + functional patterns and type checking to keep things maintainable as projects scale.</p>
+        <p>I’m a systems-oriented Roblox developer who loves turning game design ideas into reliable, extensible code — from data-driven economies to tactile combat and UI frameworks. I use Luau with OOP + functional patterns and type checking to keep things maintainable as projects scale.</p>
         <div class="about__actions">
-          <a class="btn btn--accent" href="Martin_Cordova_Resume_Fixed.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+          <!-- Keep your existing resume file name; update if you rename it -->
+          <a class="btn btn--accent" href="resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
           <a class="btn btn--ghost" href="#contact">Contact</a>
         </div>
       </div>
@@ -79,7 +80,7 @@
           </div>
           <div class="card__body">
             <h3>Grimheart</h3>
-            <p class="muted">Action‑RPG systems demo</p>
+            <p class="muted">Action-RPG systems demo</p>
             <ul class="list">
               <li>Persistent saving & serialization</li>
               <li>Player customization & appearance</li>
@@ -102,7 +103,7 @@
             <p class="muted">Environment & UI systems</p>
             <ul class="list">
               <li>Seamless day/night transitions</li>
-              <li>Drag‑and‑drop inventory UI</li>
+              <li>Drag-and-drop inventory UI</li>
               <li>Custom cinematic camera</li>
             </ul>
           </div>
@@ -129,6 +130,7 @@
             </ul>
           </div>
           <div class="card__actions">
+            <!-- Keep your current Roblox link as-is -->
             <a class="btn btn--accent btn--small" href="https://www.roblox.com/games/113539794566492/Tap-World-Demo" target="_blank" rel="noreferrer">Play on Roblox</a>
           </div>
         </article>
@@ -137,80 +139,80 @@
   </section>
 
   <!-- CODE SAMPLES -->
-<section id="code" class="section">
-  <div class="container">
-    <div class="section__head">
-      <h2>Code Samples</h2>
-      <p class="muted">Core systems and utilities I’ve built for scalable Roblox experiences.</p>
+  <section id="code" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Code Samples</h2>
+        <p class="muted">Core systems and utilities I’ve built for scalable Roblox experiences.</p>
+      </div>
+
+      <div class="cards">
+        <!-- Timer -->
+        <article class="card card--code">
+          <div class="card__body">
+            <h3>Timer</h3>
+            <p class="muted">Lightweight, precise timing utility for scheduled callbacks (no drift, pause/resume/cancel).</p>
+            <ul class="list">
+              <li>Heartbeat-driven; no per-instance connections</li>
+              <li>Absolute end-times to avoid drift</li>
+              <li>Pause, resume, reset, cancel</li>
+            </ul>
+          </div>
+          <div class="card__actions">
+            <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/Timer.lua" target="_blank" rel="noreferrer">View Code</a>
+          </div>
+        </article>
+
+        <!-- PlayerSession -->
+        <article class="card card--code">
+          <div class="card__body">
+            <h3>PlayerSession</h3>
+            <p class="muted">Authoritative per-player session/data layer with safe retrieval and persistence.</p>
+            <ul class="list">
+              <li>Await + retry pattern for DataStores</li>
+              <li>Validated getters; non-blocking reads</li>
+              <li>Clear lifecycle and teardown</li>
+            </ul>
+          </div>
+          <div class="card__actions">
+            <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/PlayerSession.lua" target="_blank" rel="noreferrer">View Code</a>
+          </div>
+        </article>
+
+        <!-- PlayerMultiplier -->
+        <article class="card card--code">
+          <div class="card__body">
+            <h3>PlayerMultiplier</h3>
+            <p class="muted">Composable per-player buffs/multipliers (pets, boosts, gamepasses) with expiry.</p>
+            <ul class="list">
+              <li>Additive and multiplicative layers</li>
+              <li>No instance leaks; clear API</li>
+              <li>Expiration & cleanup logic</li>
+            </ul>
+          </div>
+          <div class="card__actions">
+            <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/PlayerMultiplier.lua" target="_blank" rel="noreferrer">View Code</a>
+          </div>
+        </article>
+
+        <!-- Inventory -->
+        <article class="card card--code">
+          <div class="card__body">
+            <h3>Inventory</h3>
+            <p class="muted">Server-authoritative inventory (singleton) with idempotent grants and capacity limits.</p>
+            <ul class="list">
+              <li>All-or-nothing grants; slot enforcement</li>
+              <li>Changed(player, delta) event for UI</li>
+              <li>Pet power from definitions (click × shiny)</li>
+            </ul>
+          </div>
+          <div class="card__actions">
+            <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/Inventory.lua" target="_blank" rel="noreferrer">View Code</a>
+          </div>
+        </article>
+      </div>
     </div>
-
-    <div class="cards">
-      <!-- Timer -->
-      <article class="card card--code">
-        <div class="card__body">
-          <h3>Timer</h3>
-          <p class="muted">Lightweight, precise timing utility for scheduled callbacks (no drift, pause/resume/cancel).</p>
-          <ul class="list">
-            <li>Heartbeat-driven; no per-instance connections</li>
-            <li>Absolute end-times to avoid drift</li>
-            <li>Pause, resume, reset, cancel</li>
-          </ul>
-        </div>
-        <div class="card__actions">
-          <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/Timer.lua" target="_blank" rel="noreferrer">View Code</a>
-        </div>
-      </article>
-
-      <!-- PlayerSession -->
-      <article class="card card--code">
-        <div class="card__body">
-          <h3>PlayerSession</h3>
-          <p class="muted">Authoritative per-player session/data layer with safe retrieval and persistence.</p>
-          <ul class="list">
-            <li>Await + retry pattern for DataStores</li>
-            <li>Validated getters; non-blocking reads</li>
-            <li>Clear lifecycle and teardown</li>
-          </ul>
-        </div>
-        <div class="card__actions">
-          <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/PlayerSession.lua" target="_blank" rel="noreferrer">View Code</a>
-        </div>
-      </article>
-
-      <!-- PlayerMultiplier -->
-      <article class="card card--code">
-        <div class="card__body">
-          <h3>PlayerMultiplier</h3>
-          <p class="muted">Composable per-player buffs/multipliers (pets, boosts, gamepasses) with expiry.</p>
-          <ul class="list">
-            <li>Additive and multiplicative layers</li>
-            <li>No instance leaks; clear API</li>
-            <li>Expiration & cleanup logic</li>
-          </ul>
-        </div>
-        <div class="card__actions">
-          <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/PlayerMultiplier.lua" target="_blank" rel="noreferrer">View Code</a>
-        </div>
-      </article>
-
-      <!-- Inventory -->
-      <article class="card card--code">
-        <div class="card__body">
-          <h3>Inventory</h3>
-          <p class="muted">Server-authoritative inventory (singleton) with idempotent grants and capacity limits.</p>
-          <ul class="list">
-            <li>All-or-nothing grants; slot enforcement</li>
-            <li>Changed(player, delta) event for UI</li>
-            <li>Pet power from defs (click × shiny)</li>
-          </ul>
-        </div>
-        <div class="card__actions">
-          <a class="btn btn--accent btn--small" href="https://github.com/SHINEOKAY4/shineokay4.github.io/blob/main/Inventory.lua" target="_blank" rel="noreferrer">View Code</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- SKILLS -->
   <section id="skills" class="section">
@@ -241,22 +243,50 @@
         <h2>Contact</h2>
         <p class="muted">Let’s build something great.</p>
       </div>
-      <div class="contact-cdn">
-        <a class="contact-link" href="mailto:SyntaxOperator@Gmail.com">
-          <span class="brand gmail"><img src="https://cdn.simpleicons.org/gmail/FFFFFF" alt="Gmail logo"></span>
-          <span>SyntaxOperator@Gmail.com</span>
+
+      <div class="contact-cards">
+        <!-- Email -->
+        <a class="contact-card" href="mailto:SyntaxOperator@Gmail.com">
+          <span class="icon pill gmail" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#EA4335" d="M3 6h3v12H3z"/>
+              <path fill="#34A853" d="M18 6h3v12h-3z"/>
+              <path fill="#FBBC04" d="M6 6l6 4.5L18 6v3l-6 4.5L6 9z"/>
+              <path fill="#4285F4" d="M6 18V9l6 4.5L18 9v9z"/>
+            </svg>
+          </span>
+          <div class="contact-text"><b>Email</b><span>SyntaxOperator@Gmail.com</span></div>
         </a>
-        <a class="contact-link" href="https://www.roblox.com/users/5251245881/profile" target="_blank" rel="noreferrer">
-          <span class="brand roblox"><img src="https://cdn.simpleicons.org/roblox/FFFFFF" alt="Roblox logo"></span>
-          <span>SHINE on Roblox</span>
+
+        <!-- Roblox -->
+        <a class="contact-card" href="https://www.roblox.com/users/5251245881/profile" target="_blank" rel="noreferrer">
+          <span class="icon pill roblox" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="2" transform="rotate(15 12 12)" fill="#FB4F29"/>
+              <rect x="10" y="10" width="4" height="4" transform="rotate(15 12 12)" fill="#fff"/>
+            </svg>
+          </span>
+          <div class="contact-text"><b>Roblox</b><span>SHINE on Roblox</span></div>
         </a>
-        <a class="contact-link" href="https://github.com/SHINEOKAY4" target="_blank" rel="noreferrer">
-          <span class="brand github"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub logo"></span>
-          <span>github.com/SHINEOKAY4</span>
+
+        <!-- GitHub -->
+        <a class="contact-card" href="https://github.com/SHINEOKAY4" target="_blank" rel="noreferrer">
+          <span class="icon pill github" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff">
+              <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.1c-3.22.7-3.9-1.4-3.9-1.4-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.39.97.11-.76.41-1.27.75-1.56-2.57-.29-5.27-1.29-5.27-5.73 0-1.27.46-2.31 1.2-3.13-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.21 1.19a11.1 11.1 0 0 1 5.85 0c2.23-1.5 3.2-1.19 3.2-1.19.63 1.59.23 2.76.11 3.05.75.82 1.2 1.86 1.2 3.13 0 4.45-2.7 5.43-5.29 5.72.42.36.8 1.06.8 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+            </svg>
+          </span>
+          <div class="contact-text"><b>GitHub</b><span>github.com/SHINEOKAY4</span></div>
         </a>
-        <div class="contact-link">
-          <span class="brand discord"><img src="https://cdn.simpleicons.org/discord/FFFFFF" alt="Discord logo"></span>
-          <span>Shine_Okay</span>
+
+        <!-- Discord -->
+        <div class="contact-card">
+          <span class="icon pill discord" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff">
+              <path d="M20 6.5c-1.9-1.3-4-1.4-4-1.4l-.2.2c1.3.4 2.1 1 2.1 1s-2.2-1.2-5.9-1.2-5.9 1.2-5.9 1.2.8-.6 2.1-1l-.2-.2s-2.1.1-4 1.4C2.9 11.6 4.6 16 9 17.7c0 0 .7-.9 1.3-1.7-2.5-.8-3.4-2.4-3.4-2.4s.2.2.6.4c.8.5 1.6.8 2.2 1.1 1.1.4 2.2.5 3.4.5s2.3-.2 3.4-.5c.7-.2 1.4-.5 2.2-1.1.1 0 .2-.1.3-.2.4-.2.6-.4.6-.4s-.9 1.6-3.4 2.4c.6.8 1.3 1.7 1.3 1.7 4.4-1.7 6.1-6.1 3.7-11.2zM9.5 13c-.6 0-1.1-.6-1.1-1.3s.5-1.3 1.1-1.3 1.1.6 1.1 1.3S10.1 13 9.5 13zm5 0c-.6 0-1.1-.6-1.1-1.3s.5-1.3 1.1-1.3 1.1.6 1.1 1.3-.5 1.3-1.1 1.3z"/>
+            </svg>
+          </span>
+          <div class="contact-text"><b>Discord</b><span>Shine_Okay</span></div>
         </div>
       </div>
     </div>
@@ -268,9 +298,20 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Active link highlight on scroll
     const links=[...document.querySelectorAll('.nav__links a')];
     const sections=links.map(a=>document.querySelector(a.getAttribute('href')));
-    const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{const i=sections.indexOf(e.target);if(i>-1){if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));links[i].classList.add('active');}}})},{rootMargin:'-55% 0px -35% 0px',threshold:.01});sections.forEach(s=>io.observe(s));
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        const i=sections.indexOf(e.target);
+        if(i>-1 && e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          links[i].classList.add('active');
+        }
+      })
+    },{rootMargin:'-55% 0px -35% 0px',threshold:.01});
+    sections.forEach(s=>io.observe(s));
   </script>
 </body>
 </html>
