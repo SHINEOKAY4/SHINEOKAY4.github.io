@@ -42,7 +42,6 @@ export type TimerInstance = typeof(setmetatable({} :: {
 local ActiveTimerList: { TimerInstance } = {}
 local RunnerHeartbeatConnection: RBXScriptConnection? = nil
 
---- Returns the current synchronized server time (seconds).
 --- Uses Workspace:GetServerTimeNow for a monotonic, network-synchronized clock.
 local function getCurrentServerTime(): number
 	return Workspace:GetServerTimeNow()
@@ -251,4 +250,5 @@ function Timer.OnEnded(self: TimerInstance, callback: () -> ())
 end
 
 return Timer
+
 
