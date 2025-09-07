@@ -74,29 +74,40 @@ a:hover{text-decoration:underline}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;align-items:start}
 .chip{display:inline-block;padding:9px 12px;border-radius:999px;border:1px solid rgba(94,240,255,.35);background:linear-gradient(180deg,rgba(6,160,227,.18),rgba(6,160,227,.10));color:#cdefff}
 
-/* Contact via Simple Icons CDN */
-.contact-cdn{display:grid;gap:12px}
-@media(min-width:760px){.contact-cdn{grid-template-columns:repeat(2,1fr)}}
-.contact-link{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:linear-gradient(180deg,#0f2136,#0c1828);border:1px solid rgba(255,255,255,.10);color:#e6eef8;text-decoration:none;transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease}
-.contact-link:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,0,0,.35);border-color:rgba(94,240,255,.35);text-decoration:none}
-/* Contact icons fix */
-.brand {
-  display: inline-grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-}
+/* Contact cards (final polished version) */
+.contact-cards{display:grid;gap:12px}
+@media (min-width:760px){.contact-cards{grid-template-columns:repeat(2,1fr)}}
 
-.brand img {
-  width: 20px;  
-  height: 20px;
-  display: block;
+.contact-card{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 14px;border-radius:14px;
+  background:linear-gradient(180deg,#0f2136,#0c1828);
+  border:1px solid rgba(255,255,255,.10);
+  color:#e6eef8;text-decoration:none;
+  transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease
 }
-.brand.gmail{background:#D44638}
-.brand.github{background:#0d1117}
-.brand.discord{background:#5865F2}
-.brand.roblox{background:#E2231A}
+.contact-card:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,0,0,.35);border-color:rgba(94,240,255,.35);text-decoration:none}
+
+.icon.pill{
+  display:inline-grid;place-items:center;
+  width:28px;height:28px;border-radius:6px;flex:0 0 28px
+}
+.icon.pill svg{width:18px;height:18px;display:block}
+
+.icon.pill.gmail{background:#D44638}
+.icon.pill.github{background:#0d1117}
+.icon.pill.discord{background:#5865F2}
+.icon.pill.roblox{background:#E2231A}
+
+.contact-text{display:flex;flex-direction:column;line-height:1.2}
+.contact-text b{font-size:.95rem}
+.contact-text span{color:#a9b8cc;font-size:.9rem}
+
+/* Code card tweaks */
+.card.card--code .card__body{padding-top:14px}
+.card.card--code h3{font-size:18px;margin:0 0 6px}
+.card.card--code .list li::before{background:#38bdf8;box-shadow:0 0 10px rgba(56,189,248,.45)}
 
 /* Footer */
 .footer{padding:28px 0;color:#91a7c0;text-align:center;border-top:1px solid rgba(255,255,255,.06);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0))}
+
