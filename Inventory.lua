@@ -1,6 +1,6 @@
 
 --!strict
--- ServerScriptService/Service/Inventory.luau
+--Inventory
 local HttpService       = game:GetService("HttpService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace         = game:GetService("Workspace")
@@ -818,7 +818,7 @@ end
 ---@param playerData table
 ---@return Item[]
 function Inventory:GetItemsByDef(player: Player, defId: string, playerData: { [string]: any }): { Item }
-	-- Use GetBag so we’re guaranteed shape repair + index rebuild.
+	-- Use GetBag so weÂ’re guaranteed shape repair + index rebuild.
 	local bag = self:GetBag(playerData)
 	local out: { Item } = {}
 	for id in pairs(bag.indexByDef[defId] or {}) do
@@ -854,3 +854,4 @@ function Inventory:EmitBagSnapshot(player: Player, playerData: { [string]: any }
 end
 
 return (Inventory :: any) :: InventoryModule
+
